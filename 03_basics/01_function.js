@@ -1,6 +1,6 @@
 function sayMyName()
 {
-    console.log("D");
+    console.log("d");
     console.log("E");
     console.log("E");
     console.log("P");
