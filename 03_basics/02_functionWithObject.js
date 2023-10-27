@@ -8,7 +8,7 @@ console.log(cartPrice(3,34,56,67)); // here any value in this array can be used
 
 // function in an object
 const myObj={
-    username:"deep",
+    username:"Deep",
     age:18
 }
 const myFun=function(anyfunction)
