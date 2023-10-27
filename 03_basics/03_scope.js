@@ -7,7 +7,7 @@ if(true)
 console.log(name);
 
 // but in var
-var fname="deep";
+var fname="Deep";
 if(true)
 {
    var fname="shweta"; // var doesnot work as it needs to work, fname is created inside if statement so its value can be accessed inside if statement only but here using var we can accessed its value outside if statement also, this is defect of var 
