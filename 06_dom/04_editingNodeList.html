@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+function addLanguage(langName)
+{
+    const li=document.createElement("li");
+    li.innerHTML=`${langName}`;
+    const ul=document.querySelector("ul");
+    ul.appendChild(li);
+}
+addLanguage("python");
+addLanguage("typescipt");
+
+function optimizedWay(langName) // this is optimized way , because in this case , we don't have to traverse through all the dom tree
+{
+    const list=document.createElement("li");
+    list.appendChild(document.createTextNode(`${langName}`));
+    document.querySelector(".language").appendChild(list);
+}
+optimizedWay("Ruby");
+
+
+
+//Edit
+const secondChild=document.querySelector("li:nth-child(2)");
+const newlang=document.createElement("li");
+newlang.innerText="java";
+secondChild.replaceWith(newlang);
+
+
+const last=document.querySelector("li:last-child");
+last.remove();
+</script>
+</html>
