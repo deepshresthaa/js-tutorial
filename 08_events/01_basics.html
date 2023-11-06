@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <ul class="container">
+            <li><img width="300px" id="bandipur" src="addEventListener/deep (1) - Copy.JPG" alt=""></li>
+            <li><img width="300px" id="china-gate" src="addEventListener/deep (42) - Copy.JPG" alt=""></li>
+            <li><a href="https://www.google.com">Google</a></li>
+        </ul>
+</body>
+<script>
+    // const container=document.querySelector(".container");
+   document.querySelector("#bandipur").addEventListener('click',function(e){
+    e.stopPropagation();
+    console.log("bandipur clicked");
+   },false);
+
+   document.querySelector("#china-gate").addEventListener('click',function(e){
+    console.log("china gate clicked");
+   },true);
+
+   document.querySelector(".container").addEventListener('click',function(e){
+    console.log("ul clicked");
+    e.preventDefault();
+    e.stopPropagation();
+   },false);
+</script>
+</html>
